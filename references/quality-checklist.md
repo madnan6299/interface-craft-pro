@@ -13,6 +13,13 @@
 - [ ] Realistic content lengths and data density have been checked.
 - [ ] No fake metrics, fake testimonials, or unsupported claims.
 
+## Design-system consistency
+- [ ] Global navigation, contextual navigation, and content are visually distinct where needed.
+- [ ] Colors, spacing, radii, typography, icons, control heights, and elevation follow reusable tokens.
+- [ ] Active navigation and status are not conveyed by color alone.
+- [ ] Banners, promotions, and decorative elements do not compete with the primary task.
+- [ ] Panels/cards are used for meaningful grouping rather than wrapping every element.
+
 ## Interaction and states
 - [ ] Every visible control performs its stated behavior.
 - [ ] Relevant loading, empty, no-results, error, success, disabled, and permission states are covered.
