@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.2.0 — Material-inspired enterprise UI
+
+- Added a dedicated guide for polished admin panels, SaaS control centers, hosting dashboards, and Material-inspired design-system consistency.
+- Expanded core skill guidance for semantic tokens, layered navigation, restrained surfaces, consistent iconography, accessible states, and reference screenshot analysis.
+- Added enterprise shell patterns and design-system consistency checks to dashboard guidance and the quality checklist.
+# Changelog
+
 ## 2.1.0 — Reference-driven website recreation
 
 - Added an evidence-led website replication playbook for URL, screenshot, and visual-reference tasks.
