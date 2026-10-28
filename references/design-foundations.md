@@ -35,5 +35,8 @@ Use realistic content to test layout. Avoid filler repeated across cards, fake m
 ## Design-system consistency
 For admin panels and SaaS control centers, prefer a coherent system over one-off decoration. Define reusable semantic tokens for surfaces, text, outlines, actions, status, focus, radii, spacing, and control sizes. Keep global navigation distinct from contextual navigation and the content area. Use one consistent icon family, clear active states, restrained elevation, and useful feedback. For a Material-inspired enterprise treatment, apply `material-inspired-enterprise-ui.md`.
 
+## Design-system consistency
+For admin panels and SaaS control centers, prefer a coherent system over one-off decoration. Define reusable semantic tokens for surfaces, text, outlines, actions, status, focus, radii, spacing, and control sizes. Keep global navigation distinct from contextual navigation and the content area. Use one consistent icon family, clear active states, restrained elevation, and useful feedback. For a Material-inspired enterprise treatment, apply `material-inspired-enterprise-ui.md`.
+
 ## Decision rule
 When visual polish conflicts with clarity, accessibility, performance, or the user's established workflow, prioritize the latter. Make the smallest change that solves the real problem.
