@@ -17,6 +17,7 @@
   <a href="#quick-start">Quick Start</a> ·
   <a href="#ready-to-use-prompts">Ready-to-Use Prompts</a> ·
   <a href="#reference-website-recreation">Website Recreation</a> ·
+  <a href="#design-direction-gallery">Design Direction Gallery</a> ·
   <a href="#capabilities">Capabilities</a> ·
   <a href="#repository-structure">Repository Structure</a>
 </p>
@@ -198,6 +199,49 @@ A URL alone is not enough to guarantee a faithful recreation. Interface Craft Pr
 | Verification | Core flows, accessibility, responsiveness, tests, build, and honest limitations |
 
 The goal is **high visual and behavioral fidelity supported by evidence**. Results depend on the pages and assets that can actually be inspected, the tools available, and the scope of the task. The skill does not promise pixel-perfect results without comparison.
+
+## Design Direction Gallery
+
+These visual examples demonstrate the **Material-inspired enterprise UI** guidance included in Interface Craft Pro. They are original, repository-hosted SVG illustrations—not screenshots of Google's products. Use them as visual direction for calm surfaces, clear hierarchy, consistent navigation, and accessible component states.
+
+### 1. Material-Inspired Dashboard System
+
+![Material-inspired enterprise dashboard with neutral surfaces, consistent cards, readable typography, and restrained purple actions](assets/material-dashboard-system.svg)
+
+**What this demonstrates**
+- A calm light-theme canvas with clear white surfaces and subtle outlines.
+- Consistent typography, spacing, radii, and semantic status colors.
+- A clear page heading, concise system status, summary metrics, and recent activity.
+- Cards used for meaningful grouping rather than decorative clutter.
+
+**Apply it when:** building SaaS dashboards, ERP overview pages, analytics portals, and internal business tools.
+
+### 2. Navigation and Workspace Hierarchy
+
+![Enterprise dashboard showing global navigation, contextual website sidebar, top bar, status banner, and main content](assets/material-dashboard-navigation.svg)
+
+**What this demonstrates**
+- A global product bar separated from the primary icon rail and contextual sidebar.
+- The selected workspace or website is clearly visible.
+- Active navigation uses a distinct surface and label treatment, not color alone.
+- Security/status messaging stays readable and does not overwhelm the main task.
+- Main content follows a predictable breadcrumb, title, action, and content flow.
+
+**Apply it when:** designing hosting control panels, multi-tenant apps, admin consoles, CRM/ERP navigation, and complex settings screens.
+
+### 3. Accessible Components and Interaction States
+
+![Enterprise design system component examples with primary and secondary buttons, visible keyboard focus, search field, status chips, feedback banner, and table](assets/material-dashboard-components.svg)
+
+**What this demonstrates**
+- A consistent hierarchy for primary, secondary, focused, and disabled controls.
+- Search controls with clear affordances and status chips with text as well as color.
+- Visible focus treatment and concise success feedback.
+- Aligned table columns, restrained dividers, and readable information density.
+
+**Apply it when:** building reusable component libraries, forms, tables, filters, settings pages, and production-ready interaction states.
+
+> These are design-direction illustrations, not a substitute for inspecting the real product. Adapt the tokens and components to the project's brand, accessibility needs, responsive behavior, and existing codebase. Do not invent metrics or status claims in a real implementation.
 
 ## Capabilities
 
