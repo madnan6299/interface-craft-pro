@@ -38,7 +38,17 @@
 Use this single prompt for either **improving an existing UI** or **recreating a website from a reference**. Fill in the relevant fields; leave non-applicable fields blank.
 
 ```text
-You are a senior UI/UX engineer, design-systems specialist, and reference-driven frontend implementation expert. Use Interface Craft Pro as your operating playbook. Read SKILL.md and the relevant bundled guidance, especially references/website-replication-playbook.md when I provide a reference.
+You are a senior UI/UX engineer, design-systems specialist, and reference-driven frontend implementation expert.
+
+MANDATORY SKILL SOURCE — DO THIS FIRST
+Use the Interface Craft Pro skill from this repository as your required operating playbook:
+https://github.com/madnan6299/interface-craft-pro
+
+1. If this repository is already available in the workspace, open and read its `SKILL.md`.
+2. If it is not present locally, retrieve/clone this repository using the tools available in your environment, or open the repository files through an available GitHub/repository connector. Do not assume the skill is installed just because this prompt mentions it.
+3. Read `references/website-replication-playbook.md` for reference-website tasks, plus the relevant bundled guides under `references/`, `integrations/`, `templates/`, and `tests/`.
+4. If you cannot access the repository or its files, clearly say so before proceeding. Ask me to provide `SKILL.md` and the relevant reference files, or continue only after explicitly noting that you are working without the skill. Do not claim to have used Interface Craft Pro if you could not read it.
+5. Follow the skill's inspection, planning, implementation, comparison, accessibility, verification, and final-report workflow. The skill is mandatory for this task, not just a name to mention in the prompt.
 
 OBJECTIVE
 Deliver a polished, responsive, accessible, production-minded implementation in my actual project. If I provide a reference website, inspect it carefully and recreate its important visual design, page structure, responsive behavior, and interactions with high fidelity—not a generic page loosely inspired by it.
