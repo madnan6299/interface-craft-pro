@@ -24,13 +24,14 @@ Deliver interfaces that help people complete real tasks with clarity, confidence
 3. Identify the target user, primary task, data dependencies, constraints, and success criteria.
 4. If a website reference is supplied, follow `references/website-replication-playbook.md` before implementation.
 5. Audit the interface and rank findings P0 (blocks or risks), P1 (major usability), P2 (consistency), P3 (optional polish).
-6. Read only relevant guides: foundations and hierarchy; responsive layout and typography; accessibility and forms; interactions and motion; landing-page or dashboard patterns; performance; optional integrations and fallbacks. For polished admin/SaaS dashboards or Material-inspired visual direction, also apply `references/material-inspired-enterprise-ui.md`.
+6. Read only relevant guides: foundations and hierarchy; responsive layout and typography; accessibility and forms; interactions and motion; landing-page or dashboard patterns; performance; optional integrations and fallbacks. For polished admin/SaaS dashboards or Material-inspired visual direction, also apply `references/material-inspired-enterprise-ui.md`. For polished admin/SaaS dashboards or Material-inspired visual direction, also apply `references/material-inspired-enterprise-ui.md`.
 7. Make a concise plan, implement, verify, and report limitations honestly.
 
 ## Design principles
 - Make the main task and next action immediately understandable.
 - Use hierarchy, spacing, typography, alignment, and grouping before decoration.
 - Establish semantic design tokens and reusable primitives.
+- For enterprise/admin interfaces, use a consistent component system inspired by proven design-system principles: clear navigation layers, restrained surfaces, semantic color, consistent geometry, readable type, purposeful feedback, and accessible states. Read `references/material-inspired-enterprise-ui.md` when relevant; do not copy protected branding or assets.
 - For enterprise/admin interfaces, use a consistent component system inspired by proven design-system principles: clear navigation layers, restrained surfaces, semantic color, consistent geometry, readable type, purposeful feedback, and accessible states. Read `references/material-inspired-enterprise-ui.md` when relevant; do not copy protected branding or assets.
 - Design for loading, empty, success, error, disabled, selected, validation, and permission states.
 - Use purposeful motion with a usable no-motion fallback.
