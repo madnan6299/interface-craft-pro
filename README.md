@@ -1,139 +1,151 @@
-# ✦ Interface Craft Pro
+# Interface Craft Pro
 
 <p align="center">
-  <strong>Turn an existing interface into a polished, usable product — without breaking the app.</strong>
+  <strong>Reference-driven UI engineering for interfaces that look right, feel right, and work right.</strong>
+  <br />
+  Audit existing products. Recreate reference websites with high visual fidelity. Ship tested, responsive interfaces without breaking core functionality.
 </p>
 
 <p align="center">
-  A self-contained UI/UX engineering skill for AI coding agents. Audit first. Improve what matters. Verify the result.
+  <a href="https://github.com/madnan6299/interface-craft-pro"><img alt="GitHub repository" src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
+  <img alt="Self-contained skill" src="https://img.shields.io/badge/Skill-Self--Contained-2563EB?style=for-the-badge&logo=checkmarx&logoColor=white" />
+  <img alt="UI UX engineering" src="https://img.shields.io/badge/UI%2FUX-Engineering-0F766E?style=for-the-badge&logo=figma&logoColor=white" />
+  <img alt="Reference replication" src="https://img.shields.io/badge/Reference-Driven-6D28D9?style=for-the-badge&logo=googlechrome&logoColor=white" />
 </p>
 
 <p align="center">
-  <a href="#-quick-start">Quick Start</a> ·
-  <a href="#-copy-paste-prompt">Copy-Paste Prompt</a> ·
-  <a href="#-what-it-improves">What It Improves</a> ·
-  <a href="#-how-it-works">How It Works</a>
+  <a href="#quick-start">Quick Start</a> ·
+  <a href="#copy-paste-prompt">Copy-Paste Prompt</a> ·
+  <a href="#reference-website-recreation">Website Recreation</a> ·
+  <a href="#capabilities">Capabilities</a> ·
+  <a href="#repository-structure">Repository Structure</a>
 </p>
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
-**Already have a project? You do not need to rebuild it from scratch.**
+**Already have an app? Improve the real project—not just a screenshot or mockup.**
 
-1. **Make this repository available to your AI coding agent** using its supported skill/import method. If it has no repository skill support, provide `SKILL.md` as project instructions and keep this repository accessible.
-2. **Open your existing project** in the agent (for example, Cursor, Codex, Claude Code, or another coding agent that can inspect and edit project files).
-3. **Copy the prompt below**, paste it into the agent, fill in the small project details, and run it.
+1. Make this repository's skill available to your AI coding agent using its supported skill/import method. If it cannot import repositories as skills, provide `SKILL.md` as project instructions and keep this repository accessible.
+2. Open your existing project workspace in an agent that can inspect and edit files, such as Cursor, Codex, Claude Code, or a compatible coding agent.
+3. Copy the prompt below, add your project details and any reference URL, then run it.
 
-> **Important:** Visiting or starring this GitHub repository does not automatically install the skill into your coding agent.
+> Opening or starring this GitHub repository does not automatically install it into your coding agent. Tool capabilities vary by environment.
 
-## 📋 Copy-Paste Prompt
+## Copy-Paste Prompt
 
-Copy everything in this prompt into your coding agent while your existing project is open.
+Use this single prompt for either **improving an existing UI** or **recreating a website from a reference**. Fill in the relevant fields; leave non-applicable fields blank.
 
 ```text
-Act as a senior UI/UX engineer and use Interface Craft Pro as your implementation playbook.
+You are a senior UI/UX engineer, design-systems specialist, and reference-driven frontend implementation expert. Use Interface Craft Pro as your operating playbook. Read SKILL.md and the relevant bundled guidance, especially references/website-replication-playbook.md when I provide a reference.
 
-GOAL
-Improve the UI/UX of my EXISTING application so it feels polished, consistent, intuitive, responsive, accessible, and production-ready. Improve the actual project—not just produce a design concept or mockup.
+OBJECTIVE
+Deliver a polished, responsive, accessible, production-minded implementation in my actual project. If I provide a reference website, inspect it carefully and recreate its important visual design, page structure, responsive behavior, and interactions with high fidelity—not a generic page loosely inspired by it.
 
 PROJECT DETAILS
-- App/product: [briefly describe it]
-- Main screen or workflow: [specific page, route, or feature; or audit the whole app in prioritized phases]
-- Main users: [customers, admins, warehouse staff, accountants, etc.]
-- Known issues / desired style: [optional]
-- Non-negotiable constraints: [optional]
+- Project/app: [name and purpose]
+- Local project/workspace: [already open in your coding agent]
+- Reference website URL(s): [paste URL(s), if any]
+- Reference screenshots/assets: [available files, if any]
+- Pages/routes to improve or recreate: [list, or identify the main flow]
+- Primary users and tasks: [who uses it and what they need to do]
+- Preferred visual direction: [optional]
+- Constraints: [framework, APIs, deadline, browser support, etc.]
 
-NON-NEGOTIABLE SAFETY RULES
-- Inspect the repository instructions, file structure, current Git status, framework, existing design system, routes, components, APIs, data models, authentication, permissions, and tests BEFORE editing.
-- Preserve existing business logic, API contracts, database schema, authentication, authorization, routes, and working features unless I explicitly approve a change.
-- Never overwrite or discard unrelated or uncommitted work. Do not perform destructive changes.
-- Do not rewrite the whole application or add dependencies without a clear, justified need.
-- Keep the current stack and conventions where practical. Reuse existing components and design tokens; improve them consistently instead of adding one-off styles everywhere.
+PHASE 1 — INSPECT BEFORE EDITING
+- Read project instructions and inspect Git status, framework, routes, components, styles, assets, API/data contracts, authentication, permissions, and tests.
+- Preserve unrelated and uncommitted changes. Do not reset or overwrite user work.
+- If a reference URL is provided, inspect the accessible pages before coding. Review full-page structure, navigation, section order, content density, typography, spacing, colors, borders, shadows, image crops, icons, sticky elements, hover/focus states, forms, menus, dialogs, and motion.
+- Inspect representative desktop, tablet, and mobile widths. Record observed facts separately from assumptions. If the browser/reference is inaccessible, state that limitation and use only the evidence I supplied—never pretend you inspected it.
 
-WORKFLOW
-1. AUDIT: Inspect the real code and user flow. Identify visual inconsistencies, confusing hierarchy, poor spacing, typography/color issues, responsive problems, inaccessible controls, dead interactions, and missing loading/empty/error/success states.
-2. PRIORITIZE: Rank issues by impact. Share a concise diagnosis, proposed direction, files likely to change, risks, and acceptance criteria. Then proceed when the scope is clear—do not ask unnecessary questions.
-3. IMPLEMENT: Fix the highest-impact issues in coherent steps. Make real controls work. Improve layout, visual hierarchy, feedback, forms, navigation, and relevant interaction states. Avoid superficial decoration that harms clarity.
-4. ACCESSIBILITY & RESPONSIVENESS: Support keyboard navigation, visible focus, semantic structure, readable contrast, form labels and useful validation. Check narrow, medium, and wide layouts. Respect prefers-reduced-motion.
-5. VERIFY: Run the checks available in this project, such as lint, typecheck, tests, build, and browser/manual checks. Review the final diff. Fix regressions you find.
-6. REPORT HONESTLY: Summarize improvements, list exact files changed, report checks actually run and their results, and disclose remaining limitations. Never claim a test passed if it was not run.
+PHASE 2 — PLAN THE RECREATION OR IMPROVEMENT
+- Map reference pages and shared components to the existing project architecture.
+- Define reusable design tokens for color, typography, spacing, radii, shadows, breakpoints, and interaction states.
+- List the largest visual and UX gaps, planned file changes, risks, and acceptance criteria.
+- Prioritize overall structure and proportions first, then typography/color, assets, interactions, responsive behavior, and micro-details.
+- Do not pause for minor unknowns. Make reasonable, reversible assumptions and note them.
 
-RESOURCE FALLBACK
-Read SKILL.md first, then use only the relevant bundled guides under references/, templates/, integrations/, and tests/. External tools, libraries, websites, and slash commands are optional—not required. If one is unavailable, use the bundled guidance and continue without pretending it was used.
+PHASE 3 — IMPLEMENT WITH HIGH FIDELITY
+- Reuse the existing stack and components where practical. Avoid a needless rewrite or dependencies without a clear reason.
+- Recreate the reference's key layout, spacing, hierarchy, typography, color roles, component shapes, media composition, navigation, and meaningful motion as closely as available evidence supports.
+- Use assets supplied by me or assets authorized for reuse. If an asset is unavailable, create an original substitute and disclose it; do not pretend it is the original asset.
+- Implement working navigation and controls—not decorative dead buttons. Forms, filters, tabs, menus, dialogs, and other in-scope interactions must behave correctly.
+- Preserve existing business logic, APIs, database schema, routes, authentication, authorization, and data contracts unless I explicitly approve changes.
+- Build real loading, empty, validation, success, failure, disabled, and permission states where relevant. Do not fake a backend success if the service is not connected.
+- Make the interface work at narrow, medium, and wide widths. Include keyboard navigation, visible focus, semantic markup, readable contrast, and prefers-reduced-motion support.
 
-START NOW
-Inspect the existing project, audit the requested screen/workflow, and improve the real implementation. Do not stop after giving advice or creating a static mockup. Preserve existing functionality and verify your changes.
+PHASE 4 — COMPARE, REFINE, VERIFY
+- If browser/screenshot tooling is available, capture the reference and local implementation at equivalent viewport sizes.
+- Compare side by side, list the five most consequential differences, fix them, and repeat. Check the whole page—not just the hero or first viewport.
+- Run available lint, typecheck, tests, build, and relevant browser checks. Inspect console/network errors, overflow, broken assets, and core user flows.
+- Review the final diff and fix regressions. Do not claim checks passed unless they were actually run.
+
+FINAL REPORT
+- Summarize the user-facing improvements and reference patterns reproduced.
+- List exact files and routes changed.
+- State which reference pages and viewports were actually inspected.
+- Report real test/build/browser results.
+- Disclose unavailable assets, inaccessible pages, assumptions, backend dependencies, and remaining visual differences.
+
+BOUNDARIES
+Do not bypass login, paywalls, anti-bot protections, or access restrictions. Do not collect private data or build deceptive credential-capture pages. Use original implementation code and only authorized assets. Never claim pixel-perfect fidelity without actual comparison evidence.
+
+START
+Inspect the workspace and reference first, then carry the implementation through to a verified, usable result. Do not stop at a plan, a list of suggestions, or a static mockup.
 ```
 
-## ✨ What It Improves
+## Reference Website Recreation
 
-| Area | Practical outcome |
+A URL alone is not enough to guarantee a faithful recreation. Interface Craft Pro uses an evidence-led workflow:
+
+| Stage | What the agent investigates |
 |---|---|
-| Visual hierarchy | Clearer page structure, emphasis, spacing, and readability |
-| Responsive UI | Better behavior across mobile, tablet, and desktop |
-| Design consistency | Reusable patterns, typography, colors, and components |
-| Forms & feedback | Better validation, helpful errors, and clear success states |
-| Dashboards & data tables | More usable admin screens, filters, empty states, and dense data |
-| Accessibility | Keyboard support, focus states, semantics, and contrast |
-| Motion & interaction | Purposeful transitions without distracting or excessive animation |
-| Performance | Practical guidance for keeping interfaces responsive |
-| Safe changes | Protects existing business logic and contracts while improving the UI |
+| Reference inspection | Accessible pages, full-page sections, navigation, responsive layouts, and key states |
+| Design extraction | Typography, spacing, color roles, grids, surfaces, image composition, and design tokens |
+| Interaction mapping | Menus, forms, filters, tabs, dialogs, sticky behavior, and transitions |
+| Project mapping | Existing routes, components, APIs, data models, and constraints |
+| Iterative implementation | Structure first, then styling, assets, behavior, responsive details, and motion |
+| Visual comparison | Side-by-side screenshots at equivalent sizes when tooling is available |
+| Verification | Core flows, accessibility, responsiveness, tests, build, and honest limitations |
 
-## 🧭 How It Works
+The goal is **high visual and behavioral fidelity supported by evidence**. Results depend on the pages and assets that can actually be inspected, the tools available, and the scope of the task. The skill does not promise pixel-perfect results without comparison.
 
-<details>
-<summary><strong>1. Inspect before changing</strong></summary>
+## Capabilities
 
-The agent examines the existing app, its conventions, Git status, UI components, routes, and important contracts before editing.
-</details>
+<table>
+  <tr><th>Capability</th><th>What it helps deliver</th></tr>
+  <tr><td><strong>Existing UI/UX improvement</strong></td><td>Audit and improve a live codebase while preserving business behavior and integrations.</td></tr>
+  <tr><td><strong>Reference-driven recreation</strong></td><td>Systematically inspect and reproduce page structure, visual language, responsive behavior, and interactions.</td></tr>
+  <tr><td><strong>Design systems</strong></td><td>Consistent design tokens, reusable components, typography, spacing, color, and surfaces.</td></tr>
+  <tr><td><strong>Operational interfaces</strong></td><td>Dashboards, tables, filters, forms, admin panels, empty states, and error recovery.</td></tr>
+  <tr><td><strong>Interaction and motion</strong></td><td>Purposeful transitions, meaningful control states, and reduced-motion alternatives.</td></tr>
+  <tr><td><strong>Accessibility and responsive design</strong></td><td>Keyboard usability, visible focus, semantic structure, contrast, and layouts across screen sizes.</td></tr>
+  <tr><td><strong>Verification</strong></td><td>Practical checks, screenshot comparisons where available, and an honest final report.</td></tr>
+</table>
 
-<details>
-<summary><strong>2. Fix the biggest UX problems first</strong></summary>
+## Repository Structure
 
-It prioritizes broken or risky behavior, major usability issues, accessibility gaps, inconsistent patterns, and then optional polish.
-</details>
+| Path | Purpose |
+|---|---|
+| `SKILL.md` | Main instructions and end-to-end workflow |
+| `references/website-replication-playbook.md` | Reference inspection, design extraction, implementation passes, comparison, and fidelity scorecard |
+| `references/` | Design foundations, hierarchy, responsive layouts, typography, accessibility, forms, interactions, motion, and performance |
+| `integrations/` | Optional resources and fallback strategies |
+| `templates/` | Reusable audit, implementation-plan, and final-review templates |
+| `examples/` | Example briefs for dashboards, landing pages, and complex animation |
+| `tests/` | Skill quality checks and evaluation scenarios |
 
-<details>
-<summary><strong>3. Implement real, usable improvements</strong></summary>
+## Engineering Principles
 
-It aims for working interactions and complete states—not just attractive screenshots or dead buttons.
-</details>
+- Inspect before editing; protect existing work.
+- Preserve business logic and data contracts.
+- Recreate from observed evidence, not guesses.
+- Prioritize visual structure and usability before decorative effects.
+- Prefer authorized assets and original implementation code.
+- Make controls functional and states intentional.
+- Verify actual behavior and report limitations clearly.
 
-<details>
-<summary><strong>4. Verify and report</strong></summary>
+## License and Third-Party Materials
 
-It runs available project checks, reviews changes, and clearly reports what was and was not verified.
-</details>
-
-## 🧰 What's Included
-
-- **`SKILL.md`** — the main entry point and end-to-end engineering workflow.
-- **`references/`** — portable guidance for design foundations, hierarchy, responsive layouts, typography, accessibility, forms, dashboards, landing pages, motion, and performance.
-- **`integrations/`** — optional external resources and fallback strategies.
-- **`templates/`** — reusable audit, implementation-plan, and final-review templates.
-- **`examples/`** — examples for dashboards, landing pages, and complex animation tasks.
-- **`tests/`** — skill quality checks and evaluation cases.
-
-You can start with the prompt above; the agent should consult the relevant repository guides as needed. You do **not** need to read every reference file manually first.
-
-## 💡 Tips for Better Results
-
-- Name the exact route or workflow you want improved.
-- Explain who uses it and what they need to accomplish.
-- Mention what must not change (for example, API behavior or permissions).
-- For a large application, improve one high-value workflow at a time.
-- Share screenshots or design references when available.
-- Ask the agent to verify interactions—not just visual appearance.
-
-## 🔒 Design Principles
-
-- Preserve functionality while improving usability.
-- Prefer clear, consistent design over decoration for decoration's sake.
-- Make loading, empty, error, success, disabled, and permission states intentional.
-- Treat external resources as optional and verify their current availability and license before reuse.
-- Be honest about tests, limitations, and what was actually changed.
-
-## 📄 License & Reuse
-
-No repository-wide license is declared in this release. Public visibility alone does not grant permission to reuse the repository's contents. Choose and add an explicit license before broad redistribution; third-party resources retain their own terms.
+No repository-wide license is declared in this release. Public visibility alone does not grant reuse rights. Add an explicit license before broad redistribution. External references and third-party assets remain subject to their own terms.
