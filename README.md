@@ -345,7 +345,7 @@ Choose a **named design direction** that matches the product's purpose. Expand a
 |---|---|
 | `SKILL.md` | Main instructions and end-to-end workflow |
 | `references/website-replication-playbook.md` | Reference inspection, design extraction, implementation passes, comparison, and fidelity scorecard |
-| `references/` | Design foundations, hierarchy, Material-inspired enterprise UI, premium design directions, responsive layouts, typography, accessibility, forms, interactions, motion, and performance || `references/` | Design foundations, hierarchy, responsive layouts, typography, accessibility, forms, interactions, motion, and performance |
+| `references/` | Design foundations, hierarchy, premium design directions, Material-inspired enterprise UI, responsive layouts, typography, accessibility, forms, interactions, motion, and performance |
 | `integrations/` | Optional resources and fallback strategies |
 | `templates/` | Reusable audit, implementation-plan, and final-review templates |
 | `examples/` | Example briefs for dashboards, landing pages, and complex animation |
