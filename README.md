@@ -206,7 +206,7 @@ The goal is **high visual and behavioral fidelity supported by evidence**. Resul
   <tr><td><strong>Existing UI/UX improvement</strong></td><td>Audit and improve a live codebase while preserving business behavior and integrations.</td></tr>
   <tr><td><strong>Reference-driven recreation</strong></td><td>Systematically inspect and reproduce page structure, visual language, responsive behavior, and interactions.</td></tr>
   <tr><td><strong>Design systems</strong></td><td>Consistent design tokens, reusable components, typography, spacing, color, and surfaces.</td></tr>
-  <tr><td><strong>Operational interfaces</strong></td><td>Dashboards, tables, filters, forms, admin panels, empty states, and error recovery.</td></tr>
+  <tr><td><strong>Material-inspired enterprise UI</strong></td><td>Consistent admin shells, navigation layers, semantic tokens, restrained surfaces, accessible controls, and polished dashboard composition.</td></tr><tr><td><strong>Operational interfaces</strong></td><td>Dashboards, tables, filters, forms, admin panels, empty states, and error recovery.</td></tr>
   <tr><td><strong>Interaction and motion</strong></td><td>Purposeful transitions, meaningful control states, and reduced-motion alternatives.</td></tr>
   <tr><td><strong>Accessibility and responsive design</strong></td><td>Keyboard usability, visible focus, semantic structure, contrast, and layouts across screen sizes.</td></tr>
   <tr><td><strong>Verification</strong></td><td>Practical checks, screenshot comparisons where available, and an honest final report.</td></tr>
