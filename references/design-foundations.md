@@ -32,5 +32,8 @@ Use a restrained palette and a consistent spacing rhythm. Contrast, grouping, an
 ## Content and trust
 Use realistic content to test layout. Avoid filler repeated across cards, fake metrics presented as facts, dead links, and controls that look functional but do nothing. Label mock data clearly. Do not fabricate customer quotes, trust badges, performance claims, or compliance claims.
 
+## Design-system consistency
+For admin panels and SaaS control centers, prefer a coherent system over one-off decoration. Define reusable semantic tokens for surfaces, text, outlines, actions, status, focus, radii, spacing, and control sizes. Keep global navigation distinct from contextual navigation and the content area. Use one consistent icon family, clear active states, restrained elevation, and useful feedback. For a Material-inspired enterprise treatment, apply `material-inspired-enterprise-ui.md`.
+
 ## Decision rule
 When visual polish conflicts with clarity, accessibility, performance, or the user's established workflow, prioritize the latter. Make the smallest change that solves the real problem.
