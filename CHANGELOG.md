@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.1.0 — Reference-driven website recreation
+
+- Added an evidence-led website replication playbook for URL, screenshot, and visual-reference tasks.
+- Added route and viewport inspection, design-token extraction, interaction mapping, asset handling, implementation passes, screenshot comparison loops, and a fidelity scorecard.
+- Updated the core skill to invoke the replication workflow when a reference is supplied.
+- Reworked README with professional badges, a single copy-paste prompt, and a clear reference-recreation workflow.
+- Added boundaries for access restrictions, privacy, authorized assets, and honest fidelity claims.
+
 ## 2.0.0 — Self-contained UI engineering skill
 
 - Reworked SKILL.md into an end-to-end audit, plan, implementation, motion, verification, and Git workflow.
