@@ -3,7 +3,7 @@ name: interface-craft-pro
 description: A self-contained UI engineering skill for auditing, recreating, implementing, animating, and verifying polished web interfaces. Use when improving existing projects, building new interfaces, or recreating a public website from user-provided URLs, screenshots, or references. External libraries are optional; bundled references and fallbacks are sufficient.
 ---
 
-# Interface Craft Pro v2.2
+# Interface Craft Pro v2.3
 
 ## Mission
 Deliver interfaces that help people complete real tasks with clarity, confidence, accessibility, consistency, and speed. For website references, reverse-engineer the visible experience systematically and recreate its important visual and interaction patterns in the user's project—not merely a vague approximation or static screenshot. This repository is the primary operating manual. External sites, packages, plugins, and agent commands are optional enhancements, never required dependencies.
@@ -24,7 +24,7 @@ Deliver interfaces that help people complete real tasks with clarity, confidence
 3. Identify the target user, primary task, data dependencies, constraints, and success criteria.
 4. If a website reference is supplied, follow `references/website-replication-playbook.md` before implementation.
 5. Audit the interface and rank findings P0 (blocks or risks), P1 (major usability), P2 (consistency), P3 (optional polish).
-6. Read only relevant guides: foundations and hierarchy; responsive layout and typography; accessibility and forms; interactions and motion; landing-page or dashboard patterns; performance; optional integrations and fallbacks. For polished admin/SaaS dashboards or Material-inspired visual direction, also apply `references/material-inspired-enterprise-ui.md`. For polished admin/SaaS dashboards or Material-inspired visual direction, also apply `references/material-inspired-enterprise-ui.md`.
+6. Read only relevant guides: foundations and hierarchy; responsive layout and typography; accessibility and forms; interactions and motion; landing-page or dashboard patterns; performance; optional integrations and fallbacks. For polished admin/SaaS dashboards or Material-inspired visual direction, apply `references/material-inspired-enterprise-ui.md`. For premium landing pages, immersive motion, or node-based workflow editors, select a named direction from `references/premium-design-directions.md` and follow its acceptance criteria.
 7. Make a concise plan, implement, verify, and report limitations honestly.
 
 ## Design principles
@@ -32,7 +32,7 @@ Deliver interfaces that help people complete real tasks with clarity, confidence
 - Use hierarchy, spacing, typography, alignment, and grouping before decoration.
 - Establish semantic design tokens and reusable primitives.
 - For enterprise/admin interfaces, use a consistent component system inspired by proven design-system principles: clear navigation layers, restrained surfaces, semantic color, consistent geometry, readable type, purposeful feedback, and accessible states. Read `references/material-inspired-enterprise-ui.md` when relevant; do not copy protected branding or assets.
-- For enterprise/admin interfaces, use a consistent component system inspired by proven design-system principles: clear navigation layers, restrained surfaces, semantic color, consistent geometry, readable type, purposeful feedback, and accessible states. Read `references/material-inspired-enterprise-ui.md` when relevant; do not copy protected branding or assets.
+- For premium landing pages, immersive motion, and node-based workflow editors, choose a named design direction from `references/premium-design-directions.md` based on the product's primary job. State the primary direction and any secondary influence before implementation; do not blend styles indiscriminately.
 - Design for loading, empty, success, error, disabled, selected, validation, and permission states.
 - Use purposeful motion with a usable no-motion fallback.
 - Optimize for narrow screens, keyboard, assistive technology, slow networks, and error recovery.
@@ -64,6 +64,7 @@ When the user gives a website URL, screenshot, recording, or visual reference:
 - Identify assets only from accessible and authorized sources. Prefer assets supplied by the user or assets clearly permitted for reuse. When unavailable, create suitable original replacements; do not hotlink protected assets or claim exact asset parity.
 - Implement all relevant routes and controls in scope. For links or forms that depend on unavailable backend services, build a clear integration boundary and honest state rather than faking a successful transaction.
 - Compare the local implementation with the reference in repeated passes: structure → proportions → typography/color → assets → interactions → responsive behavior → details.
+- If the user supplies a browser-local `blob:` URL, explain that it is session-scoped and request the original image upload or a public HTTPS URL; do not claim to have inspected it.
 - Aim for high visual and behavioral fidelity, but never claim pixel-perfect equivalence without evidence. Explain inaccessible pages, missing assets, uncertain details, and scope limits.
 - Do not bypass login, paywalls, anti-bot controls, access restrictions, or collect private data. Do not reproduce deceptive pages intended to impersonate a service or capture credentials.
 
