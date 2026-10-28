@@ -202,46 +202,129 @@ The goal is **high visual and behavioral fidelity supported by evidence**. Resul
 
 ## Design Direction Gallery
 
-These visual examples demonstrate the **Material-inspired enterprise UI** guidance included in Interface Craft Pro. They are original, repository-hosted SVG illustrations—not screenshots of Google's products. Use them as visual direction for calm surfaces, clear hierarchy, consistent navigation, and accessible component states.
+Choose a **named design direction** that matches the product's purpose. Expand a section to see the visual reference, design principles, best-fit use cases, and implementation guidance. These examples combine original repository illustrations with reference links; they are not copied paid templates or proprietary assets.
 
-### 1. Material-Inspired Dashboard System
+<details>
+<summary><strong>Material-Inspired Hosting Dashboard</strong> — calm enterprise UI, navigation hierarchy, readable operational data</summary>
 
 ![Material-inspired enterprise dashboard with neutral surfaces, consistent cards, readable typography, and restrained purple actions](assets/material-dashboard-system.svg)
 
-**What this demonstrates**
-- A calm light-theme canvas with clear white surfaces and subtle outlines.
-- Consistent typography, spacing, radii, and semantic status colors.
-- A clear page heading, concise system status, summary metrics, and recent activity.
-- Cards used for meaningful grouping rather than decorative clutter.
+**Best for:** hosting control panels, ERP/CRM, admin consoles, analytics and internal business tools.
 
-**Apply it when:** building SaaS dashboards, ERP overview pages, analytics portals, and internal business tools.
+**Design keys**
+- Neutral canvas, raised white surfaces, subtle outlines and a restrained primary action color.
+- Clear global navigation, contextual navigation and main work area.
+- Strong heading hierarchy, consistent spacing/radii, semantic status colors and accessible control states.
+- Dense information remains scan-friendly; cards group meaningful tasks rather than decorate every section.
 
-### 2. Navigation and Workspace Hierarchy
+**Skill guide:** [Material-Inspired Enterprise UI](references/material-inspired-enterprise-ui.md)
+</details>
+
+<details>
+<summary><strong>Enterprise Navigation & Workspace</strong> — multi-level navigation and clear current context</summary>
 
 ![Enterprise dashboard showing global navigation, contextual website sidebar, top bar, status banner, and main content](assets/material-dashboard-navigation.svg)
 
-**What this demonstrates**
-- A global product bar separated from the primary icon rail and contextual sidebar.
-- The selected workspace or website is clearly visible.
-- Active navigation uses a distinct surface and label treatment, not color alone.
-- Security/status messaging stays readable and does not overwhelm the main task.
-- Main content follows a predictable breadcrumb, title, action, and content flow.
+**Best for:** multi-tenant products, website/hosting dashboards, settings screens, complex admin consoles and ERP modules.
 
-**Apply it when:** designing hosting control panels, multi-tenant apps, admin consoles, CRM/ERP navigation, and complex settings screens.
+**Design keys**
+- Separate the product-level bar, primary navigation and workspace-specific sidebar.
+- Make the active workspace, page and selected navigation state obvious.
+- Keep notices concise and subordinate to the task.
+- Design intentional mobile navigation instead of squeezing desktop sidebars.
 
-### 3. Accessible Components and Interaction States
+**Skill guide:** [Material-Inspired Enterprise UI](references/material-inspired-enterprise-ui.md)
+</details>
+
+<details>
+<summary><strong>Accessible Components & Interaction States</strong> — buttons, search, feedback, tables and keyboard focus</summary>
 
 ![Enterprise design system component examples with primary and secondary buttons, visible keyboard focus, search field, status chips, feedback banner, and table](assets/material-dashboard-components.svg)
 
-**What this demonstrates**
-- A consistent hierarchy for primary, secondary, focused, and disabled controls.
-- Search controls with clear affordances and status chips with text as well as color.
-- Visible focus treatment and concise success feedback.
-- Aligned table columns, restrained dividers, and readable information density.
+**Best for:** component libraries, production forms, data tables, filters, settings and reusable UI systems.
 
-**Apply it when:** building reusable component libraries, forms, tables, filters, settings pages, and production-ready interaction states.
+**Design keys**
+- Explicit primary, secondary, quiet, destructive, focused, disabled and loading states.
+- Accessible names, visible keyboard focus and adequate contrast.
+- Status communicates through text/icons as well as color.
+- Useful validation and feedback rather than dead decorative controls.
 
-> These are design-direction illustrations, not a substitute for inspecting the real product. Adapt the tokens and components to the project's brand, accessibility needs, responsive behavior, and existing codebase. Do not invent metrics or status claims in a real implementation.
+**Skill guide:** [Interface Quality Checklist](references/quality-checklist.md)
+</details>
+
+<details>
+<summary><strong>UberDesigner Premium Landing</strong> — high-craft marketing pages and product storytelling</summary>
+
+**Reference:** [uberdesigner.ai](https://uberdesigner.ai/)
+
+**Best for:** SaaS launches, agency websites, portfolios, product pages and campaign landing pages.
+
+**Design keys**
+- A distinctive hero composition with intentional headline wrapping and one clear primary CTA.
+- Editorial typography, controlled whitespace, curated imagery and a consistent visual idea across the full page.
+- A complete narrative from promise to product explanation and a meaningful next action.
+- Responsive section composition and real forms/links—not only a polished first screen.
+
+**Use this keyname in prompts:** `uberdesigner-premium-landing`
+
+**Reference notes:** UberDesigner describes a workflow built around reusable design prompts, runnable Vite/React projects and Figma files. Reproduce the workflow principles, not paid templates or proprietary assets. <a href="https://uberdesigner.ai/">Open reference</a>.
+</details>
+
+<details>
+<summary><strong>HorizonX Immersive Motion</strong> — premium 3D, WebGL, scroll storytelling and visual components</summary>
+
+**Reference:** [horizonx.so](https://horizonx.so/)
+
+**Best for:** creative technology, AI products, product storytelling and visually ambitious portfolios.
+
+**Design keys**
+- One signature visual concept rather than many competing effects.
+- Purposeful 3D, shaders, layered depth or scroll choreography only when they strengthen the story.
+- Smooth, coherent transitions with keyboard/touch support and a `prefers-reduced-motion` alternative.
+- Performance-aware rendering, static fallbacks and readable content if WebGL is unavailable.
+
+**Use this keyname in prompts:** `horizonx-immersive-motion`
+
+**Important:** create original visual assets and implementation code; do not copy paid library items or proprietary template files.
+</details>
+
+<details>
+<summary><strong>React Flow Workflow Canvas</strong> — node-based editors, automation builders and interactive diagrams</summary>
+
+**References:** [React Flow](https://reactflow.dev/) · [Examples](https://reactflow.dev/examples)
+
+**Best for:** workflow automation, AI agent builders, visual process editors and node-based tools.
+
+**Design keys**
+- A navigable canvas with legible nodes, clear edges/handles, pan/zoom, selection and contextual configuration.
+- Explicit valid/invalid connection feedback and clear node execution states.
+- Useful empty, saving, validation, error and unsaved-change states.
+- Undo/redo, save/restore, minimap and large-graph performance support when the product scope requires them.
+
+**Use this keyname in prompts:** `reactflow-workflow-canvas`
+
+**Important:** a static node diagram is not a functional workflow editor. Implement actual connection rules and real save/run behavior where backend support exists.
+</details>
+
+<details>
+<summary><strong>Editorial Product Story</strong> — art-directed portfolios, case studies and brand storytelling</summary>
+
+**Best for:** creative studios, product case studies, premium services and portfolio websites.
+
+**Design keys**
+- Distinctive typography, a deliberate narrative rhythm, large visual moments and controlled asymmetry.
+- Clear wayfinding and content hierarchy throughout long pages.
+- Original imagery with a coherent art direction.
+- Readability, performance and mobile layout remain more important than visual novelty.
+
+**Use this keyname in prompts:** `editorial-product-story`
+
+**Skill guide:** [Premium Design Directions](references/premium-design-directions.md)
+</details>
+
+**How to use a keyname:** include it in your prompt, for example: “Use `horizonx-immersive-motion` as the primary visual direction, follow Interface Craft Pro, inspect my project first, and preserve existing behavior.” The agent should read the matching guide, inspect your reference, and adapt the style to the real product rather than applying it blindly.
+
+> A browser-local `blob:` URL is not a stable public reference. If you want a particular screenshot added to this gallery, upload the original image file or share a normal HTTPS image URL. The current repository illustrations are original SVGs and do not claim to be the inaccessible screenshot.
 
 ## Capabilities
 
@@ -262,7 +345,7 @@ These visual examples demonstrate the **Material-inspired enterprise UI** guidan
 |---|---|
 | `SKILL.md` | Main instructions and end-to-end workflow |
 | `references/website-replication-playbook.md` | Reference inspection, design extraction, implementation passes, comparison, and fidelity scorecard |
-| `references/` | Design foundations, hierarchy, Material-inspired enterprise UI, responsive layouts, typography, accessibility, forms, interactions, motion, and performance || `references/` | Design foundations, hierarchy, responsive layouts, typography, accessibility, forms, interactions, motion, and performance |
+| `references/` | Design foundations, hierarchy, Material-inspired enterprise UI, premium design directions, responsive layouts, typography, accessibility, forms, interactions, motion, and performance || `references/` | Design foundations, hierarchy, responsive layouts, typography, accessibility, forms, interactions, motion, and performance |
 | `integrations/` | Optional resources and fallback strategies |
 | `templates/` | Reusable audit, implementation-plan, and final-review templates |
 | `examples/` | Example briefs for dashboards, landing pages, and complex animation |
