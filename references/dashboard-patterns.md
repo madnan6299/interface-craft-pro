@@ -23,5 +23,8 @@ Respect active company/workspace scope, role permissions, and record visibility.
 ## Material-inspired shell
 For hosting panels, admin consoles, and enterprise dashboards, structure the screen into clearly differentiated layers: optional account/system notice, product top bar, primary navigation, contextual sidebar, and main work area. Use a neutral canvas, raised white surfaces, subtle outlines, consistent spacing/radii, readable typography, and one restrained primary action color. Keep banners concise and subordinate to the task. Use a consistent icon family, pair ambiguous icons with labels, and provide selected/hover/focus/disabled states. Do not turn every section into a card or add decorative gradients without a product reason. See `material-inspired-enterprise-ui.md` for detailed rules.
 
+## Material-inspired shell
+For hosting panels, admin consoles, and enterprise dashboards, structure the screen into clearly differentiated layers: optional account/system notice, product top bar, primary navigation, contextual sidebar, and main work area. Use a neutral canvas, raised white surfaces, subtle outlines, consistent spacing/radii, readable typography, and one restrained primary action color. Keep banners concise and subordinate to the task. Use a consistent icon family, pair ambiguous icons with labels, and provide selected/hover/focus/disabled states. Do not turn every section into a card or add decorative gradients without a product reason. See `material-inspired-enterprise-ui.md` for detailed rules.
+
 ## Visual quality
 Dense enterprise interfaces can still feel polished through clear alignment, typography, spacing, restrained color, predictable controls, and fast feedback. Do not apply consumer-app spacing blindly to data-heavy workflows.
