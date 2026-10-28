@@ -15,7 +15,7 @@
 
 <p align="center">
   <a href="#quick-start">Quick Start</a> ·
-  <a href="#copy-paste-prompt">Copy-Paste Prompt</a> ·
+  <a href="#ready-to-use-prompts">Ready-to-Use Prompts</a> ·
   <a href="#reference-website-recreation">Website Recreation</a> ·
   <a href="#capabilities">Capabilities</a> ·
   <a href="#repository-structure">Repository Structure</a>
@@ -33,9 +33,13 @@
 
 > Opening or starring this GitHub repository does not automatically install it into your coding agent. Tool capabilities vary by environment.
 
-## Copy-Paste Prompt
+## Ready-to-Use Prompts
 
-Use this single prompt for either **improving an existing UI** or **recreating a website from a reference**. Fill in the relevant fields; leave non-applicable fields blank.
+Choose the prompt that matches your task. **Every prompt explicitly requires the agent to read and follow the Interface Craft Pro skill from this repository first.** If the agent cannot access the repository, it must say so rather than pretending it used the skill.
+
+### 1. Improve an Existing Project
+
+Use this for an already-developed React, Next.js, PHP, Laravel, or other project. It tells the agent to inspect the existing codebase and preserve APIs, business logic, authentication, permissions, and data contracts.
 
 ```text
 You are a senior UI/UX engineer, design-systems specialist, and reference-driven frontend implementation expert.
@@ -103,6 +107,80 @@ Do not bypass login, paywalls, anti-bot protections, or access restrictions. Do 
 
 START
 Inspect the workspace and reference first, then carry the implementation through to a verified, usable result. Do not stop at a plan, a list of suggestions, or a static mockup.
+```
+
+
+### 2. Build a New Project
+
+Use this when starting from a product idea and building a new application from scratch.
+
+```text
+You are a senior product engineer and UI/UX specialist. Before doing any work, use Interface Craft Pro as the mandatory skill and operating playbook.
+
+MANDATORY SKILL SOURCE
+Repository: https://github.com/madnan6299/interface-craft-pro
+- Read `SKILL.md` first.
+- Read the relevant guides under `references/`, and use `references/website-replication-playbook.md` if reference websites or screenshots are supplied.
+- Check relevant templates, integrations, and tests when useful.
+- If you cannot access and read the skill files, disclose that limitation. Do not claim to have used the skill.
+
+NEW PROJECT BRIEF
+- Product / idea: [describe the product]
+- Target users: [who will use it]
+- Main problem to solve: [problem]
+- Core features and workflows: [list]
+- Required pages/routes: [list]
+- Preferred technology stack: [framework, backend, database]
+- Reference URLs or screenshots: [optional]
+- Visual direction: [style, colors, brand]
+- Integrations / APIs: [optional]
+- Constraints: [hosting, performance, security, deadline]
+
+WORKFLOW
+1. Clarify the product's essential workflows from the brief. If something minor is missing, make a sensible assumption and document it instead of stalling.
+2. Inspect the available workspace and project instructions. If it is a genuinely new workspace, establish a clean, maintainable structure suited to the requested stack.
+3. Create a concise implementation plan covering architecture, routes, data model, components, security, and acceptance criteria.
+4. Build a coherent, responsive application—not just a landing page, static mockup, or collection of disconnected screens. Connect the core user journey end to end.
+5. Implement real validation, loading, empty, success, failure, and permission states where relevant. Do not fake backend or integration success.
+6. Follow secure coding practices; validate inputs on the server, protect secrets, enforce authentication and authorization where required, and avoid exposing private data.
+7. Use Interface Craft Pro's design, accessibility, responsive, interaction, and performance guidance. Make controls functional and support keyboard navigation and reduced motion.
+8. Run available tests, lint, type checks, build, and core-flow checks. Fix issues revealed by those checks.
+9. Review the final changes and report exact files/routes created, workflows implemented, checks actually run, setup steps, assumptions, and remaining limitations.
+
+RULES
+- Prefer maintainable, reusable components and a consistent design system.
+- Do not add unnecessary dependencies or claim a feature is complete if it is only a placeholder.
+- Never claim checks passed unless they were run.
+- Start by reading the skill and inspecting the workspace, then implement the project through to a verified usable result.
+```
+
+### 3. Polish One Screen or Route
+
+Use this shorter prompt when the project already works and you want to improve one dashboard, form, landing page, or specific route without redesigning the whole application.
+
+```text
+Polish one specific screen in my existing project as a senior UI/UX engineer. You MUST use Interface Craft Pro as the required skill before making changes.
+
+SKILL SOURCE
+https://github.com/madnan6299/interface-craft-pro
+
+1. Read this repository's `SKILL.md` first, then read the relevant guides under `references/`. For a supplied reference website, also read `references/website-replication-playbook.md`.
+2. If you cannot access the skill files, tell me clearly and do not claim you followed the skill.
+3. Inspect the current implementation, route, shared components, styles, responsive behavior, and Git status before editing. Preserve unrelated changes.
+4. Improve only the requested screen and the shared components/styles strictly needed for it. Do not rewrite unrelated routes or change business logic, APIs, permissions, or data contracts.
+5. Improve hierarchy, spacing, typography, color, alignment, component consistency, responsive behavior, accessibility, and meaningful interaction states. If I provide a reference, inspect it and compare equivalent viewport sizes where tools permit.
+6. Keep every in-scope control functional; do not replace working functionality with decorative mock UI.
+7. Run the relevant available checks and inspect the final diff. Report what changed, exact files, checks actually run, and any limitations.
+
+SCREEN TO POLISH
+- Project/workspace: [path or open workspace]
+- Route or screen: [e.g. /dashboard, /customers/new, Dispatch]
+- Main problem: [what looks or feels wrong]
+- Reference URL / screenshot: [optional]
+- Must preserve: [specific behavior, fields, APIs, permissions]
+- Preferred direction: [optional]
+
+Inspect first, make the improvements directly in the project, and verify the result. Do not stop at recommendations or a static mockup.
 ```
 
 ## Reference Website Recreation
