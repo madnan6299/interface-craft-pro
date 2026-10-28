@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.3.0 — Premium landing, motion, and workflow design directions
+
+- Added named, collapsible design directions to the README gallery for Material-inspired enterprise dashboards, UberDesigner-style premium landing pages, HorizonX-inspired immersive motion, React Flow-style workflow canvases, and editorial product storytelling.
+- Added a dedicated playbook for reference-led landing-page composition, performance-aware 3D/motion, and functional node-based editor UX.
+- Updated SKILL.md to choose directions by product purpose, require reference evidence, and handle browser-local `blob:` URLs honestly.
+- Fixed a malformed repository-structure table row in README.
+
 ## 2.2.0 — Material-inspired enterprise UI
 
 - Added a dedicated guide for polished admin panels, SaaS control centers, hosting dashboards, and Material-inspired design-system consistency.
