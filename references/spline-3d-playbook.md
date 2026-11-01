@@ -14,6 +14,47 @@ Official references:
 - Viewer export: https://docs.spline.design/exporting-your-scene/web/exporting-as-spline-viewer
 - Performance guidance: https://docs.spline.design/
 
+## Official Spline Examples Gallery
+
+Use the [official Spline Examples Gallery](https://spline.design/examples) as a practical pattern library. The gallery presents duplicateable scenes; treat each example as a study reference for a technique, not as a finished design to paste blindly into a product.
+
+### Technique index
+
+Map the visible gallery examples to the problem they demonstrate:
+
+| Example family | Gallery examples | What the agent should study |
+|---|---|---|
+| 3D typography | 3D Text - Blue | Extrusion, bevel, material response, camera framing, readable type |
+| Conditional interaction | Mini House - Conditional Logic | State-driven visibility, branching interactions, clear feedback |
+| Icon systems | Purple 3D Icons; Purple Icons Set 8 | Consistent object scale, reusable visual language, material consistency |
+| Physics and playful interaction | Kids Playground Physics; Car Camping - Physics | Motion response, collision feel, interaction boundaries, reduced-motion fallback |
+| Reusable components | Component Icecream; Component UI | Component structure, variants, reuse, predictable scene organization |
+| Cloners and procedural repetition | Cloner Cube Binary; Cloner Cube Simple; Cloner City | Repetition, controlled variation, hierarchy, visual rhythm |
+| Product / device presentation | iPhone 14 Pro; Polaroid Go | Product staging, reflections, lighting, camera composition |
+| Environments and storytelling | Room - Relaxing; Mini Room - Music; Friends Kawai; BMO - Adventure Time | Scene composition, atmosphere, narrative focus, object relationships |
+| 3D interface concepts | Hands 3D UI | Spatial affordances, legibility, interaction cues, keeping core controls accessible in HTML |
+
+Gallery contents can change. Recheck the live page before relying on an example's availability or exact behavior.
+
+### Example-driven scene workflow
+
+1. **Start with the user's goal.** Identify whether the task needs typography, an icon, a product visual, an environment, a component, a physics interaction, or a state-driven interaction.
+2. **Choose one or two relevant examples.** Open the matching gallery scene and inspect the actual scene rather than inferring details from its thumbnail or title.
+3. **Duplicate only when appropriate.** If the user has authorized use of a template, duplicate it in their Spline workspace. Otherwise, study the visible technique and build an original scene. Do not claim to have duplicated or inspected a scene without tool/account access.
+4. **Deconstruct the technique.** Record object hierarchy, components, materials, lighting, camera, events/states, physics settings, timeline behavior, and responsive framing where visible.
+5. **Translate, don't transplant.** Rebuild the useful technique around the product's brand, content, user task, and performance budget. Avoid importing unrelated objects or template branding.
+6. **Integrate and verify.** Use a real exported scene or code, then apply the web integration, accessibility, performance, and fallback checks in this playbook.
+7. **Report provenance.** Name the gallery example used as inspiration, distinguish observed details from assumptions, and disclose whether a scene was actually duplicated, edited, or newly built.
+
+### Agent responsibilities
+
+- **UI UX Design Director:** selects the scene pattern only when it supports the product goal; defines the composition and acceptance criteria.
+- **Spline Scene Artist:** studies the selected example's technique, then creates an original or explicitly authorized derivative scene.
+- **Creative Motion Engineer:** maps scene interactions to page behavior and implements loading, responsive, reduced-motion, and fallback handling.
+- **UI Quality Auditor:** checks visual clarity, interaction predictability, accessibility, runtime cost, and whether the 3D scene distracts from the primary task.
+
+**Hard rule:** a gallery example is inspiration and a learning resource—not evidence that the user's project contains that scene, that the agent has access to the Spline editor, or that reuse rights are granted.
+
 ## 1. Decide whether Spline is appropriate
 
 Good fits:
