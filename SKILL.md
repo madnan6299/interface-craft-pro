@@ -3,7 +3,7 @@ name: interface-craft-pro
 description: A self-contained UI engineering skill for auditing, recreating, implementing, animating, and verifying polished web interfaces. Use when improving existing projects, building new interfaces, or recreating a public website from user-provided URLs, screenshots, or references. External libraries are optional; bundled references and fallbacks are sufficient.
 ---
 
-# Interface Craft Pro v2.3
+# Interface Craft Pro v2.4
 
 ## Mission
 Deliver interfaces that help people complete real tasks with clarity, confidence, accessibility, consistency, and speed. For website references, reverse-engineer the visible experience systematically and recreate its important visual and interaction patterns in the user's project—not merely a vague approximation or static screenshot. This repository is the primary operating manual. External sites, packages, plugins, and agent commands are optional enhancements, never required dependencies.
@@ -25,7 +25,8 @@ Deliver interfaces that help people complete real tasks with clarity, confidence
 4. If a website reference is supplied, follow `references/website-replication-playbook.md` before implementation.
 5. Audit the interface and rank findings P0 (blocks or risks), P1 (major usability), P2 (consistency), P3 (optional polish).
 6. Read only relevant guides: foundations and hierarchy; responsive layout and typography; accessibility and forms; interactions and motion; landing-page or dashboard patterns; performance; optional integrations and fallbacks. For polished admin/SaaS dashboards or Material-inspired visual direction, apply `references/material-inspired-enterprise-ui.md`. For premium landing pages, immersive motion, or node-based workflow editors, select a named direction from `references/premium-design-directions.md` and follow its acceptance criteria.
-7. Make a concise plan, implement, verify, and report limitations honestly.
+7. For Spline/3D work, read `references/spline-3d-playbook.md`; use the specialist profiles in `.github/agents/` when supported, or follow their roles as a sequential handoff.
+8. Make a concise plan, implement, verify, and report limitations honestly.
 
 ## Design principles
 - Make the main task and next action immediately understandable.
@@ -35,6 +36,9 @@ Deliver interfaces that help people complete real tasks with clarity, confidence
 - For premium landing pages, immersive motion, and node-based workflow editors, choose a named design direction from `references/premium-design-directions.md` based on the product's primary job. State the primary direction and any secondary influence before implementation; do not blend styles indiscriminately.
 - Design for loading, empty, success, error, disabled, selected, validation, and permission states.
 - Use purposeful motion with a usable no-motion fallback.
+- Treat Spline as an optional enhancement: use it only when interactive 3D/2D meaningfully improves the task; keep essential content and actions in semantic HTML.
+- Use a real Spline export/URL, never a guessed scene URL. Provide loading, failure, static, responsive, and reduced-motion fallbacks.
+- Confirm Spline MCP connectivity before attempting scene operations; user authorization and publishing approval remain explicit.
 - Optimize for narrow screens, keyboard, assistive technology, slow networks, and error recovery.
 - Do not invent product data, fake metrics, or add dead controls.
 
@@ -68,8 +72,19 @@ When the user gives a website URL, screenshot, recording, or visual reference:
 - Aim for high visual and behavioral fidelity, but never claim pixel-perfect equivalence without evidence. Explain inaccessible pages, missing assets, uncertain details, and scope limits.
 - Do not bypass login, paywalls, anti-bot controls, access restrictions, or collect private data. Do not reproduce deceptive pages intended to impersonate a service or capture credentials.
 
-### 5. Motion
+### 5. Motion and Spline
 Use CSS for simple transitions, framework-native tools for standard component transitions, and GSAP only for complex timelines or scroll choreography when installed and justified. Define trigger, purpose, timing, easing, end state, interruption behavior, reduced-motion alternative, and cleanup. Never hide essential content behind animation.
+
+When Spline is relevant, follow `references/spline-3d-playbook.md`. Create a scene brief before editing, inspect the existing scene first, and integrate only a real export using current official instructions. Keep headings, navigation, forms, and CTAs outside the canvas. Lazy-load where appropriate; provide a static fallback and reduced-motion behavior. Measure performance instead of promising it. Never publish or change scene sharing settings without explicit user approval.
+
+### 5.1 Specialist agent workflow
+When the environment supports custom agents, use `.github/agents/` profiles:
+- UI UX Design Director: audit, design direction, tokens, and acceptance criteria.
+- Spline Scene Artist: original scene concept, composition, materials, lighting, and scene interactions.
+- Creative Motion Engineer: frontend integration, animation, responsive behavior, and fallbacks.
+- UI Quality Auditor: independent visual, functional, accessibility, and performance review.
+
+These are role instructions, not proof that agents or Spline MCP are connected. In unsupported environments, follow the same roles sequentially. Read `agents/README.md` for handoff and permission rules.
 
 ### 6. Verify
 Run available lint, typecheck, tests, and production build. Inspect narrow, medium, and wide widths; keyboard/focus; reduced motion; meaningful states; console/network errors; overflow; and core flows where tooling permits. For reference-driven work, also compare screenshots at equivalent viewport sizes and record the remaining visible differences. Record what actually ran and what did not.
