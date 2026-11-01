@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.4.0 — Spline integration and specialist agents
+
+- Added a Spline 3D and interactive experience playbook covering scene briefs, official exports, React/Next.js integration, accessibility, performance, fallbacks, and optional MCP workflows.
+- Added four specialist agent profiles: UI UX Design Director, Spline Scene Artist, Creative Motion Engineer, and UI Quality Auditor.
+- Added agent handoff documentation and a README Spline prompt for coordinated implementation.
+- Updated the core skill to use the new playbook and agent roles without assuming Spline MCP is connected or scenes are published.
+
 ## 2.3.0 — Premium landing, motion, and workflow design directions
 
 - Added named, collapsible design directions to the README gallery for Material-inspired enterprise dashboards, UberDesigner-style premium landing pages, HorizonX-inspired immersive motion, React Flow-style workflow canvases, and editorial product storytelling.
