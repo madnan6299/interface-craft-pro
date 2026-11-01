@@ -1,5 +1,7 @@
 # Spline 3D & Interactive Experience Playbook
 
+**Prompt keyname:** `spline-interactive-3d`.
+
 Use Spline when a real-time 3D or interactive 2D/3D scene improves the user's understanding, product storytelling, or interaction. Spline is an optional production tool—not a required dependency and not a substitute for sound UX.
 
 Official references:
