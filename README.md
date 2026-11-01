@@ -326,6 +326,62 @@ Choose a **named design direction** that matches the product's purpose. Expand a
 
 > A browser-local `blob:` URL is not a stable public reference. If you want a particular screenshot added to this gallery, upload the original image file or share a normal HTTPS image URL. The current repository illustrations are original SVGs and do not claim to be the inaccessible screenshot.
 
+## Specialist Agent Team
+
+Interface Craft Pro now includes four specialist agent profiles in `.github/agents/`. Use them as a coordinated team for complex projects, or copy their role instructions into a compatible coding agent.
+
+| Agent | What it owns |
+|---|---|
+| **UI UX Design Director** | Product UX audit, design direction, design tokens, screen architecture, and acceptance criteria |
+| **Spline Scene Artist** | Original Spline scenes, 3D composition, camera, materials, lighting, and scene interactions |
+| **Creative Motion Engineer** | Spline web integration, frontend motion, responsive behavior, loading and fallback states |
+| **UI Quality Auditor** | Independent visual, functional, responsive, accessibility, and performance review |
+
+**Recommended handoff:** Design Director → Spline Scene Artist (when 3D is useful) → Creative Motion Engineer → Quality Auditor → lead agent fixes P0/P1 findings.
+
+[Read the agent team guide](agents/README.md) · [Browse agent profiles](.github/agents/)
+
+## Spline 3D & Interactive Design
+
+**Reference:** [Spline](https://spline.design/) · [Official documentation](https://docs.spline.design/)
+
+Spline can add original interactive 3D scenes and animated 2D/3D visuals to product websites. Interface Craft Pro now includes a dedicated playbook for deciding when Spline is appropriate, designing scenes, integrating exports into React/Next.js or HTML, and checking accessibility and performance.
+
+**Use this keyname in prompts:** `spline-interactive-3d`
+
+**What the guide covers**
+- Scene briefs: camera, composition, focal object, materials, lighting, animation and interaction.
+- Real Spline export integration: Viewer, public scene URL, or framework code export.
+- React/Next.js client-side loading and lifecycle considerations.
+- Loading/error handling, lazy loading, static fallback, reduced motion, touch and keyboard accessibility.
+- Performance checks for geometry, textures, lights, particles, runtime, mobile GPU/CPU, and network cost.
+- Optional Spline MCP workflow for compatible coding agents, with explicit authorization and publish controls.
+
+**Important:** Spline is optional. Do not add 3D to ERP tables, forms, or admin screens just for decoration. Never invent a scene URL or claim MCP is connected without confirmation. Keep essential text and actions in normal HTML.
+
+[Read the Spline 3D playbook](references/spline-3d-playbook.md) · [Official Spline MCP setup](https://docs.spline.design/generate/spline-mcp-server) · [Spline web integration](https://spline.design/web)
+
+### Copy-paste Spline prompt
+
+```text
+Use Interface Craft Pro from https://github.com/madnan6299/interface-craft-pro.
+Read SKILL.md, references/spline-3d-playbook.md, and the relevant design-direction guides first.
+
+Act as the UI UX Design Director, Spline Scene Artist, Creative Motion Engineer, and UI Quality Auditor in sequence.
+
+Project: [describe the product and target page]
+Visual direction: [describe the desired art direction]
+Spline scene: [describe the 3D object/story/interaction]
+Framework: [React / Next.js / HTML / other]
+Existing Spline URL or file: [provide it if one exists]
+
+Inspect my actual project before editing. Decide whether 3D materially improves the user experience. If Spline MCP is available, confirm the connection and inspect the scene before making changes. If it is unavailable, provide a scene brief and exact editor steps; do not pretend to control Spline.
+
+Use original or authorized assets. Integrate only a real Spline export. Keep essential text and CTAs in semantic HTML. Add responsive framing, loading/error states, a static fallback, reduced-motion behavior, and keyboard/touch accessibility. Preserve existing routes, APIs, permissions, and business logic.
+
+Run available checks, inspect desktop/tablet/mobile, and report exact files changed, actual scene/export URL, verification performed, and anything still unverified. Do not publish or change sharing permissions without my explicit approval.
+```
+
 ## Capabilities
 
 <table>
@@ -334,6 +390,8 @@ Choose a **named design direction** that matches the product's purpose. Expand a
   <tr><td><strong>Reference-driven recreation</strong></td><td>Systematically inspect and reproduce page structure, visual language, responsive behavior, and interactions.</td></tr>
   <tr><td><strong>Design systems</strong></td><td>Consistent design tokens, reusable components, typography, spacing, color, and surfaces.</td></tr>
   <tr><td><strong>Material-inspired enterprise UI</strong></td><td>Consistent admin shells, navigation layers, semantic tokens, restrained surfaces, accessible controls, and polished dashboard composition.</td></tr><tr><td><strong>Operational interfaces</strong></td><td>Dashboards, tables, filters, forms, admin panels, empty states, and error recovery.</td></tr>
+  <tr><td><strong>Interactive 3D and Spline</strong></td><td>Scene planning, real export integration, accessible fallbacks, and performance-aware interactive visuals.</td></tr>
+  <tr><td><strong>Specialist agent workflow</strong></td><td>Design direction, scene creation, motion integration, and independent quality review.</td></tr>
   <tr><td><strong>Interaction and motion</strong></td><td>Purposeful transitions, meaningful control states, and reduced-motion alternatives.</td></tr>
   <tr><td><strong>Accessibility and responsive design</strong></td><td>Keyboard usability, visible focus, semantic structure, contrast, and layouts across screen sizes.</td></tr>
   <tr><td><strong>Verification</strong></td><td>Practical checks, screenshot comparisons where available, and an honest final report.</td></tr>
@@ -345,6 +403,9 @@ Choose a **named design direction** that matches the product's purpose. Expand a
 |---|---|
 | `SKILL.md` | Main instructions and end-to-end workflow |
 | `references/website-replication-playbook.md` | Reference inspection, design extraction, implementation passes, comparison, and fidelity scorecard |
+| `references/spline-3d-playbook.md` | Spline scene planning, web integration, accessibility, performance, fallbacks, and MCP workflow |
+| `.github/agents/` | Four specialist agent profiles for design direction, Spline scenes, motion engineering, and quality audit |
+| `agents/README.md` | Agent responsibilities, supported environments, and recommended handoff |
 | `references/` | Design foundations, hierarchy, premium design directions, Material-inspired enterprise UI, responsive layouts, typography, accessibility, forms, interactions, motion, and performance |
 | `integrations/` | Optional resources and fallback strategies |
 | `templates/` | Reusable audit, implementation-plan, and final-review templates |
