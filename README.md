@@ -361,6 +361,14 @@ Spline can add original interactive 3D scenes and animated 2D/3D visuals to prod
 
 [Read the Spline 3D playbook](references/spline-3d-playbook.md) · [Official Spline MCP setup](https://docs.spline.design/generate/spline-mcp-server) · [Spline web integration](https://spline.design/web)
 
+### Learn from the official Spline Examples Gallery
+
+Use the [Spline Examples Gallery](https://spline.design/examples) as a practical reference library for 3D typography, conditional logic, icon systems, physics, reusable components, cloners, product staging, environments, and 3D UI concepts. The playbook maps these example families to design techniques and gives agents a repeatable inspect → deconstruct → adapt → integrate → verify workflow.
+
+Agents must not claim to have opened, duplicated, edited, or reused a Spline template unless that action was actually performed with authorized access. Gallery examples are learning references; adapt the technique to the product rather than copying a scene blindly.
+
+[Open the Spline Examples Gallery](https://spline.design/examples) · [Read the example-driven workflow](references/spline-3d-playbook.md#official-spline-examples-gallery)
+
 ### Copy-paste Spline prompt
 
 ```text
