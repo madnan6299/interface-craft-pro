@@ -1,7 +1,7 @@
-# Interface Craft Pro
+# Interface Craft Pro v3.0
 
 <p align="center">
-  <strong>Reference-driven UI engineering for interfaces that look right, feel right, and work right.</strong>
+  <strong>A strategy-led UI/UX and frontend engineering system: plan the experience, build the design system, implement the interface, and verify the result.</strong>
   <br />
   Audit existing products. Recreate reference websites with high visual fidelity. Ship tested, responsive interfaces without breaking core functionality.
 </p>
@@ -23,6 +23,25 @@
 </p>
 
 ---
+
+## What's new in v3.0
+
+Version 3.0 brings a stronger strategy-to-implementation workflow while preserving the repository's reference recreation, enterprise UI, premium art direction, workflow canvas, Spline, and specialist-agent capabilities.
+
+- **Landing page strategy:** audience, offer, conversion action, objections, page narrative, proof integrity, copy, SEO, and form validation.
+- **Design systems:** primitive and semantic token layers, theme modes, typography roles, spacing, geometry, contrast, and reusable component states.
+- **Figma-ready workflow:** inspect existing libraries, reuse variables/components, build with Auto Layout, organize foundations, review in stages, and validate responsive frames. Requires an authorized Figma integration for direct file edits.
+- **Conflict resolution:** user requirements, brand systems, project conventions, and reference evidence take precedence over generic visual preferences.
+- **Quality and truthfulness:** no invented metrics or testimonials, no fake interactions, and no claims of tests or integrations that were not performed.
+
+### New playbooks
+
+| Guide | Purpose |
+|---|---|
+| [Landing Page and Conversion](./references/landing-page-and-conversion-playbook.md) | Conversion strategy, page narrative, copy, proof, SEO, and validation |
+| [Design System and Figma](./references/design-system-and-figma-playbook.md) | Tokens, components, Figma foundations, Auto Layout, and design QA |
+| [Spline 3D](./references/spline-3d-playbook.md) | 3D scenes, examples gallery, integration, accessibility, and performance |
+| [Premium Design Directions](./references/premium-design-directions.md) | Landing, immersive motion, workflow canvas, enterprise, and editorial directions |
 
 ## Quick Start
 
