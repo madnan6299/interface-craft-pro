@@ -449,6 +449,10 @@ Run available checks, inspect desktop/tablet/mobile, and report exact files chan
 - Make controls functional and states intentional.
 - Verify actual behavior and report limitations clearly.
 
+## Design references and attribution
+
+Version 3.0's landing-page strategy and design-system workflow were independently adapted from ideas studied in [elayadesign/ai-design-skills](https://github.com/elayadesign/ai-design-skills), including its landing-page and Figma skill areas. We retained general design practices, rewrote the guidance for this repository, and reconciled it with Interface Craft Pro's existing project-aware rules and specialist workflows. Refer to the upstream repository for its license and original implementation.
+
 ## License and Third-Party Materials
 
 No repository-wide license is declared in this release. Public visibility alone does not grant reuse rights. Add an explicit license before broad redistribution. External references and third-party assets remain subject to their own terms.
