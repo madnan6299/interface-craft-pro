@@ -24,6 +24,10 @@
 
 ---
 
+## Grow the project
+
+Want to help Interface Craft Pro reach more developers? See the [Global Growth Playbook](./docs/GLOBAL-GROWTH-PLAYBOOK.md) for the repository discoverability checklist, first-use improvements, 30-day campaign, ready-to-publish LinkedIn/Reddit copy, demo script, and measurement plan.
+
 ## What's new in v3.0
 
 Version 3.0 brings a stronger strategy-to-implementation workflow while preserving the repository's reference recreation, enterprise UI, premium art direction, workflow canvas, Spline, and specialist-agent capabilities.
