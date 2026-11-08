@@ -1,102 +1,235 @@
 ---
 name: interface-craft-pro
-description: A self-contained UI engineering skill for auditing, recreating, implementing, animating, and verifying polished web interfaces. Use when improving existing projects, building new interfaces, or recreating a public website from user-provided URLs, screenshots, or references. External libraries are optional; bundled references and fallbacks are sufficient.
+description: A project-aware UI/UX design and frontend engineering system for auditing, planning, designing, implementing, recreating, and verifying high-quality web interfaces. Covers conversion-led landing pages, design systems, Figma workflows when connected, enterprise dashboards, workflow editors, motion, 3D/Spline, responsive behavior, accessibility, and production implementation.
 ---
 
-# Interface Craft Pro v2.4
+# Interface Craft Pro v3.0
 
 ## Mission
-Deliver interfaces that help people complete real tasks with clarity, confidence, accessibility, consistency, and speed. For website references, reverse-engineer the visible experience systematically and recreate its important visual and interaction patterns in the user's project—not merely a vague approximation or static screenshot. This repository is the primary operating manual. External sites, packages, plugins, and agent commands are optional enhancements, never required dependencies.
+
+Create interfaces that are useful, distinctive, coherent, accessible, responsive, and production-ready. Design decisions must serve the user's task, product identity, audience, and technical constraints. Visual polish is not a substitute for working behavior.
+
+This skill combines the repository's established strengths—reference-driven implementation, enterprise UI, premium art direction, workflow canvases, motion, Spline, and specialist agents—with a stronger strategy-to-system design process.
+
+## Authority and conflict resolution
+
+Apply rules in this order:
+
+1. User's explicit requirements, brand system, supplied references, and accessibility needs.
+2. Existing product architecture, established design system, framework conventions, and working behavior.
+3. This core skill and the relevant bundled playbook.
+4. Optional external references and tool-specific conventions.
+
+A specific project requirement overrides a generic style preference. Do not impose a fixed font, icon pack, palette, radius, spacing scale, dark background, animation curve, or page structure when the project already has a deliberate system or the reference demonstrates otherwise.
+
+When two bundled guides disagree, follow this core authority section and select the rule that best preserves user intent, accessibility, and project consistency. Do not combine incompatible systems silently; state the chosen direction briefly.
 
 ## Operating contract
-- Inspect the actual project before choosing an implementation.
-- Preserve business rules, APIs, permissions, routes, data shape, and useful behavior.
-- Make the smallest coherent change that solves the highest-impact user problem.
-- Implement working behavior and states, not a static mockup presented as a finished feature.
-- Use original implementation code and user-authorized assets; do not copy proprietary source, paid assets, private data, or protected materials without permission.
-- Never claim a test, browser check, integration, or build passed unless it was actually run.
-- Prioritize correctness, accessibility, user intent, and project conventions over visual novelty.
-- A reference is evidence to inspect, not permission to invent details or ignore constraints.
+
+- Inspect the real project and its uncommitted changes before editing.
+- Preserve routes, APIs, data contracts, business logic, authentication, permissions, and useful behavior.
+- Build original implementation code; use only user-provided or authorized assets.
+- Never invent product facts, testimonials, customer logos, statistics, guarantees, prices, or successful transactions.
+- Make visible controls functional and provide meaningful loading, empty, success, error, disabled, selected, validation, and permission states.
+- Prefer the smallest coherent implementation that solves the highest-impact problem.
+- Do not claim a tool connection, test, browser inspection, screenshot comparison, build, or deployment unless it actually happened.
+- Do not copy protected source code, paid assets, private files, or a branded identity without authorization.
+- Do not bypass login, paywalls, access controls, or anti-bot restrictions.
 
 ## Start here
-1. Inspect repository instructions, framework, routes, design system, package manager, and tests.
-2. Check Git status and preserve uncommitted work.
-3. Identify the target user, primary task, data dependencies, constraints, and success criteria.
-4. If a website reference is supplied, follow `references/website-replication-playbook.md` before implementation.
-5. Audit the interface and rank findings P0 (blocks or risks), P1 (major usability), P2 (consistency), P3 (optional polish).
-6. Read only relevant guides: foundations and hierarchy; responsive layout and typography; accessibility and forms; interactions and motion; landing-page or dashboard patterns; performance; optional integrations and fallbacks. For polished admin/SaaS dashboards or Material-inspired visual direction, apply `references/material-inspired-enterprise-ui.md`. For premium landing pages, immersive motion, or node-based workflow editors, select a named direction from `references/premium-design-directions.md` and follow its acceptance criteria.
-7. For Spline/3D work, read `references/spline-3d-playbook.md`; use the specialist profiles in `.github/agents/` when supported, or follow their roles as a sequential handoff.
-8. Make a concise plan, implement, verify, and report limitations honestly.
 
-## Design principles
-- Make the main task and next action immediately understandable.
-- Use hierarchy, spacing, typography, alignment, and grouping before decoration.
-- Establish semantic design tokens and reusable primitives.
-- For enterprise/admin interfaces, use a consistent component system inspired by proven design-system principles: clear navigation layers, restrained surfaces, semantic color, consistent geometry, readable type, purposeful feedback, and accessible states. Read `references/material-inspired-enterprise-ui.md` when relevant; do not copy protected branding or assets.
-- For premium landing pages, immersive motion, and node-based workflow editors, choose a named design direction from `references/premium-design-directions.md` based on the product's primary job. State the primary direction and any secondary influence before implementation; do not blend styles indiscriminately.
-- Design for loading, empty, success, error, disabled, selected, validation, and permission states.
-- Use purposeful motion with a usable no-motion fallback.
-- Treat Spline as an optional enhancement: use it only when interactive 3D/2D meaningfully improves the task; keep essential content and actions in semantic HTML.
-- Use a real Spline export/URL, never a guessed scene URL. Provide loading, failure, static, responsive, and reduced-motion fallbacks.
-- Confirm Spline MCP connectivity before attempting scene operations; user authorization and publishing approval remain explicit.
-- Optimize for narrow screens, keyboard, assistive technology, slow networks, and error recovery.
-- Do not invent product data, fake metrics, or add dead controls.
+1. Read repository instructions and inspect Git status.
+2. Identify framework, routes, components, tokens, assets, tests, and data/API boundaries.
+3. Determine whether the task is a new page, existing-page redesign, design-system task, Figma task, dashboard, workflow editor, motion/3D experience, or reference recreation.
+4. Identify audience, primary task, business goal, conversion action (if relevant), constraints, and success criteria.
+5. Read only the relevant playbooks:
+   - Reference website or screenshot: `references/website-replication-playbook.md`
+   - Landing page and conversion strategy: `references/landing-page-and-conversion-playbook.md`
+   - Design tokens and component systems: `references/design-system-and-figma-playbook.md`
+   - Enterprise dashboards: `references/material-inspired-enterprise-ui.md`
+   - Premium landing, immersive motion, workflow editor: `references/premium-design-directions.md`
+   - Spline/3D: `references/spline-3d-playbook.md`
+   - Quality gate: `references/quality-checklist.md` and `tests/skill-quality-checklist.md`
+6. Audit and rank findings: P0 critical/blocking, P1 major usability, P2 consistency, P3 optional polish.
+7. Plan, implement, verify, and report honestly.
 
-## Workflow
+## Strategy before visuals
 
-### 1. Audit
-Review information architecture, task flow, hierarchy, consistency, responsiveness, accessibility, error recovery, loading behavior, performance, and existing behavior. Record concrete findings and user impact; avoid vague feedback such as “make it modern.”
+### Intake
 
-### 2. Plan
-State the user problem, desired outcome, files likely to change, design direction, risks, and acceptance checks. Ask only if missing information blocks safe progress; otherwise state conservative assumptions.
+Collect only missing information that materially affects the outcome. Ask concise questions together when several independent facts are essential; otherwise make a conservative assumption and proceed.
 
-### 3. Build
-- Follow the project's current framework and conventions.
-- Prefer shared components, tokens, semantic HTML, and explicit variants.
-- Make every visible control perform its stated action.
-- Cover relevant loading, empty, success, error, disabled, selected, validation, and permission states.
-- Keep server-side validation and authorization authoritative.
-- Preserve data contracts and workflows unless change is requested.
-- Avoid unnecessary dependencies and placeholder content.
+For landing pages, establish:
+- One primary audience and one offer.
+- One primary conversion action and what happens after it.
+- The audience's problem, desired outcome, awareness level, and top objections.
+- Traffic source and message context where known.
+- Verifiable proof, product screenshots, demos, and approved assets.
+- Brand voice, technical constraints, and mobile priority.
 
-### 4. Reference-driven recreation
-When the user gives a website URL, screenshot, recording, or visual reference:
-- Treat the task as a structured reverse-engineering exercise. Inspect the reference before coding; do not jump directly from its name to implementation.
-- Follow the phases, evidence log, and comparison loop in `references/website-replication-playbook.md`.
-- Recreate the design language and meaningful user experience: page structure, spacing, type scale, color roles, surfaces, navigation, responsive behavior, interactions, transitions, and key UI states.
-- Use available browser tools to inspect multiple routes and viewport sizes. If browser access is unavailable, say so and work from supplied screenshots, assets, or observations; never pretend to have browsed.
-- Identify assets only from accessible and authorized sources. Prefer assets supplied by the user or assets clearly permitted for reuse. When unavailable, create suitable original replacements; do not hotlink protected assets or claim exact asset parity.
-- Implement all relevant routes and controls in scope. For links or forms that depend on unavailable backend services, build a clear integration boundary and honest state rather than faking a successful transaction.
-- Compare the local implementation with the reference in repeated passes: structure → proportions → typography/color → assets → interactions → responsive behavior → details.
-- If the user supplies a browser-local `blob:` URL, explain that it is session-scoped and request the original image upload or a public HTTPS URL; do not claim to have inspected it.
-- Aim for high visual and behavioral fidelity, but never claim pixel-perfect equivalence without evidence. Explain inaccessible pages, missing assets, uncertain details, and scope limits.
-- Do not bypass login, paywalls, anti-bot controls, access restrictions, or collect private data. Do not reproduce deceptive pages intended to impersonate a service or capture credentials.
+For product interfaces, establish:
+- Primary user role and task.
+- Information hierarchy and key workflows.
+- Data states, permissions, error recovery, and operational constraints.
+- Existing component system and brand rules.
 
-### 5. Motion and Spline
-Use CSS for simple transitions, framework-native tools for standard component transitions, and GSAP only for complex timelines or scroll choreography when installed and justified. Define trigger, purpose, timing, easing, end state, interruption behavior, reduced-motion alternative, and cleanup. Never hide essential content behind animation.
+### Strategy and structure
 
-When Spline is relevant, follow `references/spline-3d-playbook.md`. Create a scene brief before editing, inspect the existing scene first, and integrate only a real export using current official instructions. Keep headings, navigation, forms, and CTAs outside the canvas. Lazy-load where appropriate; provide a static fallback and reduced-motion behavior. Measure performance instead of promising it. Never publish or change scene sharing settings without explicit user approval.
+A landing page should focus on one offer, one audience, and one primary action. It is not automatically a homepage. Choose structure based on intent:
+- Classic product page for an immediately understandable offer.
+- Long-form narrative when education and trust are needed.
+- Minimal conversion page for high-intent traffic.
+- Comparison page when alternatives are central to search intent.
 
-### 5.1 Specialist agent workflow
-When the environment supports custom agents, use `.github/agents/` profiles:
-- UI UX Design Director: audit, design direction, tokens, and acceptance criteria.
-- Spline Scene Artist: original scene concept, composition, materials, lighting, and scene interactions.
-- Creative Motion Engineer: frontend integration, animation, responsive behavior, and fallbacks.
+Use sections only when they help the argument. Common building blocks include a clear hero, product proof, problem/solution, benefits, how it works, use cases, testimonials or case studies, objections/FAQ, risk information, and a final CTA. Do not force every section onto every page.
+
+### Conversion and content
+
+- Match the hero promise to the traffic source and actual offer.
+- Make the primary next step obvious; secondary actions must remain visually subordinate.
+- Lead with outcomes, then explain the feature that enables them.
+- Put evidence close to the claim it supports.
+- Use specific, plain language instead of vague claims such as “streamline everything.”
+- Do not invent scarcity, urgency, customer proof, conversion numbers, guarantees, or performance claims.
+- Use clearly marked placeholders for facts the user has not supplied.
+- Write believable, product-specific sample content; avoid generic filler and repeated placeholder names.
+- Keep headings and buttons concise and understandable. Sentence case is a useful default, not a hard rule when the brand requires another convention.
+- Treat SEO metadata, internal links, semantic headings, and useful FAQ content as part of the page when search discovery matters. Do not add schema that does not match visible content.
+
+## Design system
+
+### Foundations
+
+Inspect existing tokens first. Reuse and extend them instead of replacing them reflexively.
+
+When no system exists, define:
+- Color roles: brand, surface, text, border, focus, and semantic status.
+- Typography roles: display, headings, body, labels, metadata, and controls.
+- Spacing scale and layout/container widths.
+- Radius, border, elevation, and shadow rules.
+- Icon family and sizing.
+- Motion duration, easing, and reduced-motion behavior.
+- Component variants and interactive states.
+
+Use semantic tokens rather than scattering raw values. Support light/dark themes when required by the product, and validate contrast for actual token combinations.
+
+### Typography and layout
+
+- Choose fonts based on brand, readability, language coverage, licensing, and project availability.
+- Use a coherent type scale and readable line lengths; avoid arbitrary one-off sizes when a token can express the role.
+- Use responsive constraints and fluid behavior where useful; do not force a rigid Tailwind-only scale on a design that needs a different scale.
+- Balance headings and avoid awkward orphan words where practical.
+- Establish hierarchy through size, weight, spacing, alignment, and contrast before decoration.
+- Choose grid, bento, asymmetric, editorial, or conventional layouts based on content and task—not a default three-card template.
+- Ensure responsive layouts are intentionally composed at mobile, tablet, and desktop sizes.
+
+### Color, surfaces, and visual effects
+
+- Use the existing brand palette and semantic color roles.
+- Gradients, glass, glow, shadows, textures, and dark surfaces are optional techniques, not universal defaults or universal prohibitions.
+- Use visual effects only when they improve hierarchy, storytelling, affordance, or brand expression.
+- Preserve contrast, readability, and state clarity over imagery and effects.
+- Avoid one-sided decorative borders on cards unless the design system intentionally uses them.
+- Never rely on color alone to communicate state.
+
+### Components and states
+
+Build reusable components for repeated patterns. Define clear variants and interaction states:
+- Default, hover, pressed, focus-visible, disabled.
+- Inputs: empty, filled, invalid, valid where relevant.
+- Data views: loading, empty, error, populated, permission-limited.
+- Async actions: pending, success, failure, retry where appropriate.
+
+Buttons should have a clear hierarchy (primary, secondary, tertiary/quiet, destructive). Avoid competing primary actions. Icon-only controls need accessible names and discoverable affordances. Tables, forms, menus, dialogs, and navigation must remain keyboard operable.
+
+## Reference-driven design and recreation
+
+When given a URL, screenshot, recording, or design reference:
+- Inspect before implementation; record observed facts separately from assumptions.
+- Inspect relevant routes, viewport sizes, navigation, content hierarchy, spacing, typography, surfaces, assets, and interactions where tools allow.
+- Treat a screenshot as evidence only for what is visible; do not infer hidden behavior as fact.
+- Recreate the design principles and meaningful behavior using original code and authorized assets.
+- Compare at equivalent viewports in repeated passes: structure, proportions, typography/color, imagery, interactions, responsive behavior, details.
+- If browser access is unavailable, say so and work from supplied evidence.
+- Do not claim pixel-perfect fidelity without measured comparison.
+- Ask for an uploaded asset or public URL when a browser-local `blob:` URL cannot be inspected.
+
+## Implementation workflow
+
+### Audit and plan
+
+Document the current state, top problems, desired outcome, likely files, design direction, risks, and acceptance checks. Do not rewrite the entire project for a localized request.
+
+### Build
+
+- Follow existing framework and architecture.
+- Use semantic HTML, reusable components, tokens, and explicit variants.
+- Preserve data contracts and server-side authorization/validation.
+- Make controls work; do not ship decorative dead ends.
+- Keep content realistic and facts grounded.
+- Avoid unnecessary dependencies; use existing packages first.
+- Keep code maintainable and avoid duplicating components or design tokens.
+
+### Motion
+
+Use CSS for simple transitions, framework-native animation for common component behavior, and GSAP/other libraries only when choreography justifies the dependency. Define purpose, trigger, timing, easing, end state, interruption behavior, cleanup, and reduced-motion alternative. Prefer transform/opacity for routine transitions. Avoid unbounded scroll handlers and continuous expensive rendering. Never hide essential content behind animation.
+
+### Figma (optional, tool-dependent)
+
+When the user asks to design or edit a Figma file:
+- Confirm the Figma integration/MCP is actually available and authorized.
+- Load the official Figma tool instructions/skills required by that environment before making tool calls; this repository's guidance supplements rather than replaces official tool documentation.
+- Inspect existing pages, variables, styles, components, and libraries before creating foundations.
+- Reuse existing variables and components. If foundations are missing, create a coherent token system with semantic color aliases, spacing/radius variables, and named text styles.
+- Use Auto Layout or the equivalent native layout system for maintainable responsive frames.
+- Create reusable components with variants for interactive states and expose text/content as component properties where supported.
+- Build in stages: foundations, one screen/section, screenshot review, correction, next section.
+- Keep layers and pages meaningfully named; avoid destructive edits to existing work.
+- Check contrast, responsive frames, component states, and token bindings before reporting.
+- Do not claim Figma file edits if no authorized Figma tool is connected. If unavailable, provide a portable design specification or implementation-ready code.
+
+### Spline and 3D
+
+Spline is optional. Use it only when interactive 3D/2D materially improves product understanding or storytelling. Avoid it by default for dense ERP forms, tables, settings, and navigation. Read `references/spline-3d-playbook.md`; keep essential text and actions in semantic HTML. Use a real export/URL, provide loading/error/static/reduced-motion fallbacks, and measure performance. Never assume MCP is connected or publish/change permissions without explicit approval.
+
+### Specialist agents
+
+When supported, use the profiles in `.github/agents/`:
+- UI UX Design Director: strategy, audit, art direction, tokens, acceptance criteria.
+- Spline Scene Artist: original scene planning and authorized scene work.
+- Creative Motion Engineer: frontend motion and resilient scene integration.
 - UI Quality Auditor: independent visual, functional, accessibility, and performance review.
 
-These are role instructions, not proof that agents or Spline MCP are connected. In unsupported environments, follow the same roles sequentially. Read `agents/README.md` for handoff and permission rules.
+These profiles are role instructions, not proof of agent or external-tool availability. Follow `agents/README.md` for handoff rules.
 
-### 6. Verify
-Run available lint, typecheck, tests, and production build. Inspect narrow, medium, and wide widths; keyboard/focus; reduced motion; meaningful states; console/network errors; overflow; and core flows where tooling permits. For reference-driven work, also compare screenshots at equivalent viewport sizes and record the remaining visible differences. Record what actually ran and what did not.
+## Verify
 
-### 7. Git discipline
-Inspect status, diff, diff summary, and whitespace errors. Preserve unrelated edits. Do not reset, force-push, rewrite history, delete user work, or commit/push unless explicitly requested.
+Run available lint, typecheck, tests, and production build. Inspect:
+- Mobile, tablet, desktop, zoom, and long content.
+- Keyboard navigation, focus visibility, accessible names, and form errors.
+- Reduced motion and non-animated fallback.
+- Loading, empty, success, error, disabled, and permission states.
+- Console/network errors, layout overflow, and core workflows.
+- Screenshots at matching viewport sizes for reference tasks.
+- Performance on representative devices when tools permit.
 
-## Optional reference ecosystem
-SkipperUI, Venegency UI, Animaster LAB, Impeccable, transitions.dev, GSAP resources, Claude Git guidance, and /make-interface-feel-better are optional references. Do not assume a resource is online, installed, maintained, licensed for copying, or callable. Check integrations/resource-registry.md; if unavailable, use integrations/fallback-strategies.md. Never block work because an external reference is offline.
+Fix P0/P1 issues before sign-off. Record what ran, what failed, and what remains unverified.
 
-## Required final report
-For substantial work, report: diagnosis and priority; design decisions and user benefit; exact files changed; accessibility and motion behavior; verification actually performed; known limitations, assumptions, and next steps. For website recreation, additionally report inspected routes/viewports, implemented interactions, visual comparison results, and any unavailable reference details/assets.
+## Git discipline
+
+Inspect status and diffs. Preserve unrelated changes. Never reset, force-push, rewrite history, or delete user work. Commit/push only when explicitly requested.
+
+## Required completion report
+
+For substantial work, report:
+- Diagnosis and priority.
+- Strategy and design direction.
+- Exact files changed.
+- Important interactions and states implemented.
+- Accessibility, responsive, and motion behavior.
+- Verification actually performed.
+- Assumptions, limitations, and next steps.
 
 ## Quality gate
-Use references/quality-checklist.md and tests/skill-quality-checklist.md. Fix P0/P1 failures before declaring completion; explicitly list anything unverified.
+
+Use `references/quality-checklist.md` and `tests/skill-quality-checklist.md`. Quality means task success, coherent design, working behavior, accessibility, responsiveness, maintainability, performance, and honest verification—not compliance with arbitrary visual rules.
