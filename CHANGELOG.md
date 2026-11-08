@@ -1,5 +1,15 @@
 # Changelog
 
+## 3.0.0 — Strategy-led design systems and Figma workflows
+
+- Rebuilt the core skill around user intent, product context, conversion strategy, semantic design systems, implementation, and measurable quality.
+- Added landing-page strategy, intake, narrative, conversion copy, proof integrity, SEO, and build-validation guidance.
+- Added design-system and Figma workflow guidance for semantic token layers, variables, Auto Layout, reusable components, variants, naming, and screenshot review.
+- Reconciled rigid source rules with project-aware design: fonts, icons, colors, spacing, gradients, motion, and layout are selected by brand and evidence rather than blanket prohibitions.
+- Preserved existing reference recreation, Material-inspired enterprise UI, premium art directions, workflow canvas, Spline, and specialist agent workflows.
+- Added explicit precedence rules to resolve conflicts between bundled guides and external skill conventions.
+
+
 ## 2.4.0 — Spline integration and specialist agents
 
 - Added a Spline 3D and interactive experience playbook covering scene briefs, official exports, React/Next.js integration, accessibility, performance, fallbacks, and optional MCP workflows.
